@@ -16,13 +16,13 @@ A interface simula um terminal interativo, proporcionando uma experiência únic
 ```
 
 +-----------------------------------------------------+
-| o o o               leandro\@portfolio              |
+| o o o               leandro@portfolio               |
 +-----------------------------------------------------+
 |                                                     |
 |  Welcome to my professional portfolio.              |
 |  Type 'help' to see the list of available commands. |
 |                                                     |
-|  leandro\@portfolio:\~\$ whoami\_                   |
+|  leandro@portfolio:~$ whoami_                       |
 |                                                     |
 |  # Leandro M. L. C.                                 |
 |  # Full Stack Web Developer | Web Scraper           |
