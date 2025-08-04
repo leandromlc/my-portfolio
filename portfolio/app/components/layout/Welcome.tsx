@@ -15,7 +15,8 @@ export default function WelCome({ outputElement, scrollToBottom }: WelComeParams
     Mounting virtual filesystem... <span class="text-output-green">Done.</span>
 
     Welcome to my professional portfolio.
-    Type 'help' to see the list of available commands.`);
+    Type 'help' to see the list of available commands.
+    `);
 
   const typeEffect = useCallback(
     (element: HTMLDivElement, text: string, callback?: () => void) => {
