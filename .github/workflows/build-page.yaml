@@ -3,7 +3,7 @@ name: 🚀 Build and Deploy Page
 on:
   push:
     paths:
-      - "portfolio/app/**"
+      - "portfolio/**"
     branches:
       - main
 
