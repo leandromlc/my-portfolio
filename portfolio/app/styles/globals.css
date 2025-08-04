@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1a1b26;
+  --color: #c0caf5;
+}
+
+body {
+  background: var(--background);
+  color: var(--color);
+  font-family: "Fira Code", monospace;
+}
+
+.bg-terminal {
+  background-color: #1a1b26;
+}
+.text-prompt {
+  color: #7aa2f7;
+}
+.text-output-green {
+  color: #9ece6a;
+}
+.text-output-white {
+  color: #c0caf5;
+}
+.text-output-cyan {
+  color: #7dcfff;
+}
+.text-output-red {
+  color: #ff5555;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #c0caf5;
+  width: 8px;
+  height: 1.2em;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+#command-input {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #c0caf5;
+  }
+}

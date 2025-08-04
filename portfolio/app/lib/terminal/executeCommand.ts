@@ -1,0 +1,115 @@
+import dedent from "ts-dedent";
+
+const commands: { [key: string]: string } = {
+  whoami: dedent(`
+    <span class="text-output-green font-bold"># Leandro M. L. C.</span>
+    <span class="text-output-cyan font-bold"># Crawler & Scraper Developer </span>
+
+    Atuo atualmente na Volix, aplicando meus conhecimentos em automação e inteligência de mercado para desenvolver soluções eficientes e escaláveis de extração e processamento de dados.
+
+    Sou formado em Desenvolvimento Web Full Stack pela Kenzie Academy Brasil e estou cursando Ciência da Computação na Cruzeiro do Sul Virtual, buscando sempre aprimorar minhas habilidades em desenvolvimento de sistemas e cibersegurança.
+
+    Sou motivado por desafios técnicos e busco constantemente entregar soluções de alto impacto e valor estratégico.
+    `),
+  skills: dedent(`
+    <span class="text-output-cyan">[Languages]</span>
+    - Python      - TypeScript    - JavaScript
+    - React
+
+    <span class="text-output-cyan">[Cloud & DevOps]</span>
+    - GCP Cloud Run Jobs    - Cloud Storage    - BigQuery
+    - VMs                   - GitHub Actions (CI/CD)
+
+    <span class="text-output-cyan">[Databases]</span>
+    - BigQuery
+    `),
+  experience: dedent(`
+    <span class="text-output-cyan">[2024-Present] Crawler & Scraper Developer @ Volix-Price-Tech</span>
+    - Desenvolvimento de crawlers e sistemas de automação para inteligência de mercado.
+    - Utilização de técnicas avançadas com proxies, anti-bot, paralelização e extração em larga escala.
+    - Criação de pipelines de dados escaláveis com integração a serviços de nuvem (GCP).
+    `),
+  projects: dedent(`
+    <span class="text-output-red">Error:</span> No projects currently deployed.
+    <span>Hint:</span> Try again later or check back on my GitHub!
+    `),
+  contact: dedent(`
+    - LinkedIn: <a href="https://www.linkedin.com/in/leandromlc/" target="_blank" class="text-blue-400 underline">https://www.linkedin.com/in/leandromlc/</a>
+    - GitHub:   <a href="https://github.com/leandromlc" target="_blank" class="text-blue-400 underline">https://github.com/leandromlc</a>
+    - Email:    <a href="mailto:lourenco.contato1@gmail.com" class="text-blue-400 underline">lourenco.contato1@gmail.com</a>
+    `),
+  help: dedent(`
+    Available commands:
+    <span class="text-output-green">whoami</span>          - Displays a short biography.
+    <span class="text-output-green">skills</span>          - Lists my main technical skills.
+    <span class="text-output-green">experience</span>      - Shows my professional work history.
+    <span class="text-output-green">projects</span>        - Lists some of my featured projects.
+    <span class="text-output-green">contact</span>         - Shows contact information and social links.
+    <span class="text-output-green">clear</span>           - Clears the terminal screen.
+    <span class="text-output-green">all</span>             - Runs all commands at once.
+    `),
+};
+
+interface ExecuteCommandParams {
+  command: string;
+  outputElement: HTMLDivElement;
+  scrollToBottom: () => void;
+}
+
+const printOutput = (
+  htmlContent: string,
+  outputElement: HTMLDivElement,
+  scrollToBottom: () => void
+) => {
+  const div = document.createElement("div");
+  div.style.whiteSpace = "pre-wrap";
+  div.innerHTML = htmlContent;
+
+  outputElement.appendChild(div);
+  scrollToBottom();
+};
+
+export const executeCommand = async ({
+  command,
+  outputElement,
+  scrollToBottom,
+}: ExecuteCommandParams) => {
+  switch (command) {
+    case "clear":
+      outputElement.innerHTML = "";
+      break;
+
+    case "all":
+      for (const cmd of ["whoami", "skills", "experience", "projects", "contact"]) {
+        const promptLine = document.createElement("div");
+
+        promptLine.innerHTML = `
+          <br>
+          <span class="text-prompt">
+            leandro@portfolio:~$
+          </span>
+          <span class="text-output-white">
+            ${cmd}
+          </span>
+        `;
+        outputElement.appendChild(promptLine);
+        printOutput(commands[cmd], outputElement, scrollToBottom);
+
+        await new Promise((resolve) => setTimeout(resolve, 300));
+      }
+      break;
+
+    default:
+      if (commands[command]) {
+        printOutput(commands[command], outputElement, scrollToBottom);
+      } 
+      else {
+        printOutput(
+          `Command not found: ${command}. Type 'help' for a list of commands.`,
+          outputElement,
+          scrollToBottom
+        );
+      }
+      break;
+  }
+};
