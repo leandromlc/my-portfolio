@@ -49,7 +49,7 @@ Siga os passos abaixo para executar o projeto na sua máquina:
 
 ```bash
 git clone https://github.com/leandromlc/my-portfolio.git
-cd SEU-REPOSITORIO
+cd my-portfolio
 ````
 
 ### 2. Instale as dependências
