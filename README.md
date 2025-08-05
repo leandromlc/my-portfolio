@@ -95,7 +95,7 @@ export const commands = {
         <span class="text-output-green font-bold"># Leandro M. L. C.</span>
         <span class="text-output-cyan"># Full Stack Web Developer | Web Scraper</span>
 
-        Here goes a brief biography about me..
+        Here goes a brief biography about me...
     `,
   },
 };
