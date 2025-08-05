@@ -19,7 +19,7 @@ jobs:
 
       - name: 🏗️ Build the Docker image
         run: |
-          docker build -t my-portfolio:latest -f portfolio/Dockerfile .
+          docker build -t my-portfolio:latest .
 
       - name: 🚀 Build the Docker image
         run: |
