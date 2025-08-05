@@ -3,7 +3,7 @@ name: 🚀 Build and Deploy Page
 on:
   push:
     paths:
-      - "portfolio/**"
+      - "portfolio/app/**"
     branches:
       - main
 
@@ -12,6 +12,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: portfolio
 
     steps:
       - name: 📥 Code checkout
