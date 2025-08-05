@@ -26,9 +26,6 @@ body {
 .text-output-cyan {
   color: #7dcfff;
 }
-.text-output-red {
-  color: #ff5555;
-}
 
 .cursor {
   display: inline-block;

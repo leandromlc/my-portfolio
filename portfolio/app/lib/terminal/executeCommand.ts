@@ -30,8 +30,19 @@ const commands: { [key: string]: string } = {
     - Criação de pipelines de dados escaláveis com integração a serviços de nuvem (GCP).
     `),
   projects: dedent(`
-    <span class="text-output-red">Error:</span> No projects currently deployed.
-    <span>Hint:</span> Try again later or check back on my GitHub!
+    <span class="text-output-cyan">1. [parallel-scraper-job]</span>
+      - Desc: Python crawler containerizado e executado como Cloud Run Job com distribuição paralela de tarefas e gerenciamento de proxies.
+
+    <span class="text-output-cyan">2. [ci-cd-pipelines]</span>
+      - Desc: Auxílio na criação de workflows automatizados de CI/CD usando GitHub Actions, com armazenamento seguro de segredos em ambientes.
+
+    <span class="text-output-cyan">3. [scraping-systems]</span>
+      - Desc: Desenvolvimento de scrapers com reprocessamento e armazenamento em Cloud Storage, seguindo arquitetura de microsserviços.
+
+    <span class="text-output-cyan">4. [proxy-monitor]</span>
+      - Desc: Ferramenta de monitoramento de proxies para consulta e verificação da disponibilidade dos pools de proxies.
+
+    <p class="text-output-cyan">* Os links não estão disponíveis publicamente, pois os projetos são privados.</p>
     `),
   contact: dedent(`
     - LinkedIn: <a href="https://www.linkedin.com/in/leandromlc/" target="_blank" class="text-blue-400 underline">https://www.linkedin.com/in/leandromlc/</a>
