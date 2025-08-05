@@ -1,0 +1,30 @@
+name: 🚀 Build and Deploy Page
+
+on:
+  push:
+    paths:
+      - "portfolio/app/**"
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: portfolio
+
+    steps:
+      - name: 📥 Code checkout
+        uses: actions/checkout@v3
+
+      - name: 🏗️ Build the Docker image
+        run: |
+          docker build -t my-portfolio:latest .
+
+      - name: 🐋 Run container
+        run: |
+          docker run -d -p 3000:3000 my-portfolio:latest
