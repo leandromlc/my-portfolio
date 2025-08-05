@@ -25,6 +25,6 @@ jobs:
         run: |
           docker build -t my-portfolio:latest .
 
-      - name: 🚀 Build the Docker image
+      - name: 🐋 Run container
         run: |
           docker run -p 3000:3000 my-portfolio:latest
