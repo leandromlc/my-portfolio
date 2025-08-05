@@ -30,7 +30,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: 'portfolio/package-lock.json'
 
-      - name: Install & Build and Export
+      - name: Install & Build
         run: |
           npm ci
           npm run build
