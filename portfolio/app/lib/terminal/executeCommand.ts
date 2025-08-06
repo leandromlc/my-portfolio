@@ -51,13 +51,13 @@ const commands: { [key: string]: string } = {
     `),
   help: dedent(`
     Available commands:
-    <span class="text-output-green">whoami</span>          - Displays a short biography.
-    <span class="text-output-green">skills</span>          - Lists my main technical skills.
-    <span class="text-output-green">experience</span>      - Shows my professional work history.
-    <span class="text-output-green">projects</span>        - Lists some of my featured projects.
-    <span class="text-output-green">contact</span>         - Shows contact information and social links.
-    <span class="text-output-green">clear</span>           - Clears the terminal screen.
-    <span class="text-output-green">all</span>             - Runs all commands at once.
+    <span class="text-output-green">whoami</span>          - Exibe uma breve biografia.
+    <span class="text-output-green">skills</span>          - Lista minhas principais habilidades técnicas.
+    <span class="text-output-green">experience</span>      - Mostra meu histórico profissional.
+    <span class="text-output-green">projects</span>        - Lista alguns dos meus projetos em destaque.
+    <span class="text-output-green">contact</span>         - Mostra informações de contato e links sociais.
+    <span class="text-output-green">clear</span>           - Limpa a tela do terminal.
+    <span class="text-output-green">all</span>             - Executa todos os comandos de uma vez.
     `),
 };
 
